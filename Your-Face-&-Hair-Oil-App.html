@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Face & Hair Oil Moisturizer</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#7D9D7F',secondary:'#E8C07D'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Poppins', sans-serif;
+background: linear-gradient(135deg, #FDFBF9 0%, #F7F3EF 100%);
+position: relative;
+}
+body::before {
+content: '';
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-image: url("https://readdy.ai/api/search-image?query=subtle%20organic%20pattern%20with%20oil%20droplets%20and%20delicate%20floral%20elements%2C%20extremely%20light%20and%20minimal%2C%20almost%20invisible%2C%20soft%20cream%20color%2C%20luxury%20skincare%20texture%2C%20seamless%20pattern&width=400&height=400&seq=15&orientation=squarish");
+opacity: 0.03;
+pointer-events: none;
+z-index: 0;
+}
+h1, h2, h3, h4, .serif {
+font-family: 'Playfair Display', serif;
+}
+.logo {
+font-family: 'Pacifico', serif;
+}
+input[type="range"]::-webkit-slider-thumb {
+-webkit-appearance: none;
+appearance: none;
+width: 20px;
+height: 20px;
+border-radius: 50%;
+background: #7D9D7F;
+cursor: pointer;
+}
+input[type="range"] {
+-webkit-appearance: none;
+appearance: none;
+height: 4px;
+background: #E5E7EB;
+border-radius: 4px;
+}
+.progress-bar {
+height: 4px;
+background: #E5E7EB;
+border-radius: 4px;
+position: relative;
+overflow: hidden;
+}
+.progress-bar-fill {
+position: absolute;
+height: 100%;
+background: #7D9D7F;
+border-radius: 4px;
+transition: width 0.3s ease;
+}
+</style>
+</head>
+<body class="bg-[#FDFBF9] text-gray-800">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full bg-white shadow-sm z-50 px-4 py-3 flex items-center justify-between">
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-menu-line ri-lg"></i>
+</div>
+<div class="logo text-primary text-xl">logo</div>
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-notification-3-line ri-lg"></i>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="pt-16 pb-20 px-4 relative z-10">
+<!-- Hero Section -->
+<section class="mt-4 mb-8">
+<div class="relative rounded-xl overflow-hidden h-48 mb-6">
+<img src="https://readdy.ai/api/search-image?query=luxury%20skincare%20and%20haircare%20oil%20products%20arranged%20elegantly%20with%20botanical%20elements%2C%20soft%20lighting%2C%20premium%20lifestyle%20photography%2C%20organic%20aesthetic%2C%20high-end%20cosmetics%2C%20glass%20bottles%20with%20droppers%2C%20natural%20ingredients%20like%20flowers%20and%20leaves%2C%20soft%20neutral%20background%2C%20professional%20product%20photography&width=800&height=400&seq=1&orientation=landscape" alt="Luxury Oil Products" class="w-full h-full object-cover object-top">
+<div class="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent flex flex-col justify-center p-6">
+<h1 class="text-white text-2xl font-medium mb-2">Natural Luxury<br>for Your Beauty</h1>
+<p class="text-white/90 text-sm mb-4">Discover premium oils for face & hair</p>
+<button class="bg-primary text-white px-5 py-2 rounded-button w-max text-sm font-medium cursor-pointer">Shop Now</button>
+</div>
+</div>
+<!-- Search Bar -->
+<div class="relative mb-8">
+<input type="text" placeholder="Search oils, ingredients, concerns..." class="w-full bg-white border border-gray-200 rounded-full py-3 pl-12 pr-4 shadow-sm text-sm focus:outline-none focus:ring-1 focus:ring-primary">
+<div class="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 flex items-center justify-center text-gray-400">
+<i class="ri-search-line"></i>
+</div>
+</div>
+</section>
+<!-- Oil Finder Quiz Promo -->
+<section class="mb-8">
+<div class="bg-white/80 backdrop-blur-sm rounded-xl p-5 shadow-sm border border-gray-100">
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-lg font-medium">Find Your Perfect Oil</h2>
+<span class="text-xs text-primary font-medium">2 min quiz</span>
+</div>
+<p class="text-sm text-gray-600 mb-4">Answer a few questions to get personalized recommendations for your skin and hair type.</p>
+<div class="flex space-x-3 mb-5">
+<div class="flex-1 bg-primary/10 rounded-lg p-3 text-center">
+<div class="w-8 h-8 mx-auto mb-2 flex items-center justify-center">
+<i class="ri-drop-line ri-lg text-primary"></i>
+</div>
+<span class="text-xs font-medium">Skin Type</span>
+</div>
+<div class="flex-1 bg-primary/10 rounded-lg p-3 text-center">
+<div class="w-8 h-8 mx-auto mb-2 flex items-center justify-center">
+<i class="ri-scissors-line ri-lg text-primary"></i>
+</div>
+<span class="text-xs font-medium">Hair Type</span>
+</div>
+<div class="flex-1 bg-primary/10 rounded-lg p-3 text-center">
+<div class="w-8 h-8 mx-auto mb-2 flex items-center justify-center">
+<i class="ri-heart-line ri-lg text-primary"></i>
+</div>
+<span class="text-xs font-medium">Concerns</span>
+</div>
+</div>
+<button class="w-full bg-primary text-white py-3 rounded-button font-medium cursor-pointer">Start Quiz</button>
+</div>
+</section>
+<!-- Trending Products -->
+<section class="mb-8">
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-lg font-medium">Trending Now</h2>
+<a href="#" class="text-sm text-primary">View All</a>
+</div>
+<div class="flex overflow-x-auto space-x-4 pb-4 -mx-4 px-4">
+<div class="min-w-[160px] max-w-[160px] bg-white/90 backdrop-blur-sm rounded-xl shadow-sm overflow-hidden border border-gray-100">
+<div class="h-40 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=premium%20argan%20oil%20in%20elegant%20glass%20bottle%20with%20dropper%2C%20isolated%20on%20soft%20beige%20background%2C%20professional%20product%20photography%2C%20high-end%20skincare%2C%20luxury%20cosmetic%2C%20minimalist%20aesthetic%2C%20clean%20composition%2C%20soft%20shadows&width=320&height=320&seq=2&orientation=squarish" alt="Argan Oil" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-3">
+<div class="flex items-center mb-1">
+<div class="flex text-yellow-400 text-xs">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-half-fill"></i>
+</div>
+<span class="text-xs text-gray-500 ml-1">4.8</span>
+</div>
+<h3 class="text-sm font-medium mb-1 truncate">Pure Argan Oil</h3>
+<p class="text-xs text-gray-500 mb-2">For face & hair</p>
+<div class="flex items-center justify-between">
+<span class="text-sm font-medium">$38.50</span>
+<button class="w-8 h-8 bg-primary rounded-full flex items-center justify-center cursor-pointer">
+<i class="ri-add-line text-white"></i>
+</button>
+</div>
+</div>
+</div>
+<div class="min-w-[160px] max-w-[160px] bg-white/90 backdrop-blur-sm rounded-xl shadow-sm overflow-hidden border border-gray-100">
+<div class="h-40 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=premium%20rosehip%20oil%20in%20elegant%20glass%20bottle%20with%20dropper%2C%20isolated%20on%20soft%20beige%20background%2C%20professional%20product%20photography%2C%20high-end%20skincare%2C%20luxury%20cosmetic%2C%20minimalist%20aesthetic%2C%20clean%20composition%2C%20soft%20shadows&width=320&height=320&seq=3&orientation=squarish" alt="Rosehip Oil" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-3">
+<div class="flex items-center mb-1">
+<div class="flex text-yellow-400 text-xs">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+<span class="text-xs text-gray-500 ml-1">5.0</span>
+</div>
+<h3 class="text-sm font-medium mb-1 truncate">Rosehip Facial Oil</h3>
+<p class="text-xs text-gray-500 mb-2">Anti-aging formula</p>
+<div class="flex items-center justify-between">
+<span class="text-sm font-medium">$42.00</span>
+<button class="w-8 h-8 bg-primary rounded-full flex items-center justify-center cursor-pointer">
+<i class="ri-add-line text-white"></i>
+</button>
+</div>
+</div>
+</div>
+<div class="min-w-[160px] max-w-[160px] bg-white/90 backdrop-blur-sm rounded-xl shadow-sm overflow-hidden border border-gray-100">
+<div class="h-40 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=premium%20jojoba%20oil%20in%20elegant%20glass%20bottle%20with%20dropper%2C%20isolated%20on%20soft%20beige%20background%2C%20professional%20product%20photography%2C%20high-end%20skincare%2C%20luxury%20cosmetic%2C%20minimalist%20aesthetic%2C%20clean%20composition%2C%20soft%20shadows&width=320&height=320&seq=4&orientation=squarish" alt="Jojoba Oil" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-3">
+<div class="flex items-center mb-1">
+<div class="flex text-yellow-400 text-xs">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-line"></i>
+</div>
+<span class="text-xs text-gray-500 ml-1">4.2</span>
+</div>
+<h3 class="text-sm font-medium mb-1 truncate">Jojoba Balancing Oil</h3>
+<p class="text-xs text-gray-500 mb-2">For oily skin</p>
+<div class="flex items-center justify-between">
+<span class="text-sm font-medium">$35.00</span>
+<button class="w-8 h-8 bg-primary rounded-full flex items-center justify-center cursor-pointer">
+<i class="ri-add-line text-white"></i>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Face & Hair Care Showcase -->
+<section class="mb-8">
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-lg font-medium">Discover Benefits</h2>
+<a href="#" class="text-sm text-primary">Learn More</a>
+</div>
+<div class="space-y-4">
+<!-- Face Care -->
+<div class="bg-white/90 backdrop-blur-sm rounded-xl overflow-hidden shadow-sm border border-gray-100">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=close%20up%20macro%20photography%20of%20glowing%2C%20hydrated%20skin%20texture%20with%20oil%20droplets%2C%20soft%20natural%20lighting%2C%20beauty%20skincare%20result%2C%20professional%20dermatology%20photo%2C%20showing%20smooth%20and%20radiant%20skin%20surface&width=800&height=400&seq=20&orientation=landscape" alt="Face Care" class="w-full h-48 object-cover object-top">
+<div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+<h3 class="text-white text-lg font-medium">Face Care</h3>
+<p class="text-white/90 text-sm">Transform your skin's radiance</p>
+</div>
+</div>
+<div class="p-4">
+<div class="grid grid-cols-2 gap-4">
+<div class="text-center">
+<img src="https://readdy.ai/api/search-image?query=before%20and%20after%20comparison%20of%20skin%20texture%2C%20showing%20improvement%20in%20hydration%20and%20glow%2C%20professional%20dermatology%20photo%2C%20split%20image%20showing%20transformation&width=400&height=200&seq=21&orientation=landscape" alt="Before After" class="w-full h-24 object-cover rounded-lg mb-2">
+<p class="text-xs text-gray-600">Visible Results</p>
+</div>
+<div class="text-center">
+<img src="https://readdy.ai/api/search-image?query=luxury%20facial%20oil%20bottles%20with%20botanical%20ingredients%20like%20roses%20and%20lavender%2C%20arranged%20elegantly%20on%20marble%20surface%2C%20premium%20product%20photography&width=400&height=200&seq=22&orientation=landscape" alt="Products" class="w-full h-24 object-cover rounded-lg mb-2">
+<p class="text-xs text-gray-600">Premium Oils</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Hair Care -->
+<div class="bg-white/90 backdrop-blur-sm rounded-xl overflow-hidden shadow-sm border border-gray-100">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=ultra%20close%20up%20macro%20shot%20of%20glossy%2C%20silky%20hair%20strands%20with%20visible%20oil%20treatment%20droplets%2C%20extreme%20detail%20of%20healthy%20hair%20texture%2C%20professional%20beauty%20photography%2C%20soft%20golden%20lighting%2C%20luxury%20hair%20care%20visual&width=800&height=400&seq=23&orientation=landscape" alt="Hair Care" class="w-full h-48 object-cover object-top">
+<div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+<h3 class="text-white text-lg font-medium">Luxury Hair Care</h3>
+<p class="text-white/90 text-sm">Transform your hair with premium oils</p>
+</div>
+</div>
+<div class="p-4">
+<div class="flex items-center space-x-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+<i class="ri-drop-line ri-lg text-primary"></i>
+</div>
+<div class="flex-1">
+<h4 class="text-sm font-medium mb-1">Deep Nourishment</h4>
+<p class="text-xs text-gray-600">Penetrates each strand for lasting hydration</p>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-3 mb-6">
+<div class="aspect-square rounded-lg overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=extreme%20close%20up%20of%20single%20glossy%20hair%20strand%20with%20oil%20droplet%2C%20macro%20beauty%20photography%2C%20showing%20hair%20texture%20detail%2C%20professional%20lighting&width=200&height=200&seq=24&orientation=squarish" alt="Hair Detail" class="w-full h-full object-cover">
+</div>
+<div class="aspect-square rounded-lg overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=stylized%20hair%20oil%20application%20sequence%2C%20showing%20oil%20drops%20falling%20onto%20shiny%20hair%2C%20premium%20hair%20care%20visual%2C%20artistic%20beauty%20shot&width=200&height=200&seq=25&orientation=squarish" alt="Oil Application" class="w-full h-full object-cover">
+</div>
+<div class="aspect-square rounded-lg overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=close%20up%20of%20smooth%2C%20glossy%20hair%20texture%20after%20oil%20treatment%2C%20showing%20mirror-like%20shine%2C%20luxury%20hair%20care%20result%2C%20professional%20photography&width=200&height=200&seq=26&orientation=squarish" alt="Results" class="w-full h-full object-cover">
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="text-sm">Shine Enhancement</span>
+<span class="text-xs text-primary">95%</span>
+</div>
+<div class="progress-bar">
+<div class="progress-bar-fill" style="width: 95%"></div>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-sm">Hydration Level</span>
+<span class="text-xs text-primary">90%</span>
+</div>
+<div class="progress-bar">
+<div class="progress-bar-fill" style="width: 90%"></div>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-sm">Split End Reduction</span>
+<span class="text-xs text-primary">85%</span>
+</div>
+<div class="progress-bar">
+<div class="progress-bar-fill" style="width: 85%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Categories -->
+<section class="mb-8">
+<h2 class="text-lg font-medium mb-4">Browse Categories</h2>
+<div class="grid grid-cols-4 gap-3">
+<div class="text-center">
+<div class="w-16 h-16 mx-auto mb-2 bg-primary/10 rounded-full flex items-center justify-center overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=icon%2C%203D%20illustration%2C%20facial%20oil%20dropper%2C%20the%20icon%20should%20take%20up%2070%25%20of%20the%20frame%2C%20isolated%20on%20white%20background%2C%20centered%20composition%2C%20soft%20lighting%2C%20no%20shadows%2C%20no%20text%2C%20Content%20simple&width=64&height=64&seq=5&orientation=squarish" alt="Face Oils" class="w-full h-full object-cover">
+</div>
+<span class="text-xs font-medium whitespace-nowrap overflow-hidden text-overflow-ellipsis">Face Oils</span>
+</div>
+<div class="text-center">
+<div class="w-16 h-16 mx-auto mb-2 bg-primary/10 rounded-full flex items-center justify-center overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=icon%2C%203D%20illustration%2C%20hair%20oil%20bottle%2C%20the%20icon%20should%20take%20up%2070%25%20of%20the%20frame%2C%20isolated%20on%20white%20background%2C%20centered%20composition%2C%20soft%20lighting%2C%20no%20shadows%2C%20no%20text%2C%20Content%20simple&width=64&height=64&seq=6&orientation=squarish" alt="Hair Oils" class="w-full h-full object-cover">
+</div>
+<span class="text-xs font-medium whitespace-nowrap overflow-hidden text-overflow-ellipsis">Hair Oils</span>
+</div>
+<div class="text-center">
+<div class="w-16 h-16 mx-auto mb-2 bg-primary/10 rounded-full flex items-center justify-center overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=icon%2C%203D%20illustration%2C%20oil%20blends%20in%20bottle%2C%20the%20icon%20should%20take%20up%2070%25%20of%20the%20frame%2C%20isolated%20on%20white%20background%2C%20centered%20composition%2C%20soft%20lighting%2C%20no%20shadows%2C%20no%20text%2C%20Content%20simple&width=64&height=64&seq=7&orientation=squarish" alt="Oil Blends" class="w-full h-full object-cover">
+</div>
+<span class="text-xs font-medium whitespace-nowrap overflow-hidden text-overflow-ellipsis">Oil Blends</span>
+</div>
+<div class="text-center">
+<div class="w-16 h-16 mx-auto mb-2 bg-primary/10 rounded-full flex items-center justify-center overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=icon%2C%203D%20illustration%2C%20essential%20oil%20bottle%2C%20the%20icon%20should%20take%20up%2070%25%20of%20the%20frame%2C%20isolated%20on%20white%20background%2C%20centered%20composition%2C%20soft%20lighting%2C%20no%20shadows%2C%20no%20text%2C%20Content%20simple&width=64&height=64&seq=8&orientation=squarish" alt="Essential Oils" class="w-full h-full object-cover">
+</div>
+<span class="text-xs font-medium whitespace-nowrap overflow-hidden text-overflow-ellipsis">Essential Oils</span>
+</div>
+</div>
+</section>
+<!-- Education Hub -->
+<section class="mb-8">
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-lg font-medium">Oil Education Hub</h2>
+<a href="#" class="text-sm text-primary">View All</a>
+</div>
+<div class="space-y-4">
+<div class="bg-white/90 backdrop-blur-sm rounded-xl overflow-hidden shadow-sm border border-gray-100">
+<div class="h-40 relative">
+<img src="https://readdy.ai/api/search-image?query=woman%20applying%20facial%20oil%2C%20beauty%20routine%2C%20self-care%2C%20skincare%20tutorial%2C%20elegant%20lifestyle%20photography%2C%20soft%20lighting%2C%20premium%20aesthetic%2C%20natural%20beauty%2C%20close-up%20of%20hands%20applying%20oil%20to%20face%2C%20luxury%20skincare%20moment&width=400&height=200&seq=9&orientation=landscape" alt="Oil Application Guide" class="w-full h-full object-cover object-top">
+<div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+<div class="w-12 h-12 bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center cursor-pointer">
+<i class="ri-play-fill ri-lg text-white"></i>
+</div>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-base font-medium mb-1">The Art of Oil Application</h3>
+<p class="text-sm text-gray-600 mb-3">Learn the perfect techniques for applying facial oils for maximum benefits.</p>
+<div class="flex items-center">
+<div class="w-8 h-8 rounded-full overflow-hidden mr-2">
+<img src="https://readdy.ai/api/search-image?query=professional%20female%20skincare%20expert%20portrait%2C%20elegant%2C%20confident%2C%20natural%20makeup%2C%20neutral%20background%2C%20professional%20headshot&width=80&height=80&seq=10&orientation=squarish" alt="Dr. Emma Richardson" class="w-full h-full object-cover">
+</div>
+<div>
+<p class="text-xs font-medium">Dr. Emma Richardson</p>
+<p class="text-xs text-gray-500">Dermatologist</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white/90 backdrop-blur-sm rounded-xl overflow-hidden shadow-sm border border-gray-100">
+<div class="h-40">
+<img src="https://readdy.ai/api/search-image?query=various%20oil%20ingredients%20like%20argan%2C%20jojoba%2C%20and%20rosehip%20arranged%20elegantly%20with%20botanical%20elements%2C%20ingredient%20education%2C%20natural%20skincare%20ingredients%2C%20premium%20photography%2C%20soft%20lighting%2C%20educational%20content%20visual&width=400&height=200&seq=11&orientation=landscape" alt="Oil Ingredients Guide" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-4">
+<h3 class="text-base font-medium mb-1">Understanding Oil Ingredients</h3>
+<p class="text-sm text-gray-600 mb-3">Discover the unique properties of different carrier and essential oils.</p>
+<div class="flex items-center">
+<div class="w-8 h-8 rounded-full overflow-hidden mr-2">
+<img src="https://readdy.ai/api/search-image?query=professional%20male%20botanist%20portrait%2C%20elegant%2C%20confident%2C%20natural%20look%2C%20neutral%20background%2C%20professional%20headshot&width=80&height=80&seq=12&orientation=squarish" alt="Dr. James Miller" class="w-full h-full object-cover">
+</div>
+<div>
+<p class="text-xs font-medium">Dr. James Miller</p>
+<p class="text-xs text-gray-500">Botanist</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Personalized Routine -->
+<section class="mb-8">
+<div class="bg-white/80 backdrop-blur-sm rounded-xl p-5 shadow-sm border border-gray-100">
+<h2 class="text-lg font-medium mb-4">Your Hydration Routine</h2>
+<div class="mb-5">
+<div class="flex items-center justify-between mb-2">
+<span class="text-sm">Morning Facial Oil</span>
+<span class="text-xs text-primary">75% Complete</span>
+</div>
+<div class="progress-bar mb-1">
+<div class="progress-bar-fill" style="width: 75%"></div>
+</div>
+<p class="text-xs text-gray-500">Next application: Today, 8:00 AM</p>
+</div>
+<div class="mb-5">
+<div class="flex items-center justify-between mb-2">
+<span class="text-sm">Evening Hair Treatment</span>
+<span class="text-xs text-primary">50% Complete</span>
+</div>
+<div class="progress-bar mb-1">
+<div class="progress-bar-fill" style="width: 50%"></div>
+</div>
+<p class="text-xs text-gray-500">Next application: Today, 9:00 PM</p>
+</div>
+<div class="mb-5">
+<div class="flex items-center justify-between mb-2">
+<span class="text-sm">Weekly Intensive Mask</span>
+<span class="text-xs text-primary">25% Complete</span>
+</div>
+<div class="progress-bar mb-1">
+<div class="progress-bar-fill" style="width: 25%"></div>
+</div>
+<p class="text-xs text-gray-500">Next application: Sunday, May 18</p>
+</div>
+<button class="w-full bg-white border border-primary text-primary py-3 rounded-button font-medium cursor-pointer">View Full Routine</button>
+</div>
+</section>
+<!-- Customer Reviews -->
+<section class="mb-8">
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-lg font-medium">Customer Stories</h2>
+<a href="#" class="text-sm text-primary">View All</a>
+</div>
+<div class="space-y-4">
+<div class="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
+<div class="flex items-start mb-3">
+<div class="w-10 h-10 rounded-full overflow-hidden mr-3">
+<img src="https://readdy.ai/api/search-image?query=professional%20portrait%20of%20a%20woman%20in%20her%2030s%2C%20natural%20makeup%2C%20smiling%2C%20neutral%20background%2C%20headshot&width=80&height=80&seq=13&orientation=squarish" alt="Olivia Parker" class="w-full h-full object-cover">
+</div>
+<div>
+<p class="text-sm font-medium">Olivia Parker</p>
+<div class="flex text-yellow-400 text-xs">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+</div>
+<p class="text-sm text-gray-600 mb-3">"The rosehip oil completely transformed my skin in just two weeks. My fine lines are visibly reduced and my skin feels so much more hydrated!"</p>
+<div class="flex items-center">
+<span class="text-xs text-gray-500">Verified Purchase • Rosehip Facial Oil</span>
+</div>
+</div>
+<div class="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
+<div class="flex items-start mb-3">
+<div class="w-10 h-10 rounded-full overflow-hidden mr-3">
+<img src="https://readdy.ai/api/search-image?query=professional%20portrait%20of%20a%20man%20in%20his%2040s%2C%20well-groomed%2C%20smiling%2C%20neutral%20background%2C%20headshot&width=80&height=80&seq=14&orientation=squarish" alt="Michael Thompson" class="w-full h-full object-cover">
+</div>
+<div>
+<p class="text-sm font-medium">Michael Thompson</p>
+<div class="flex text-yellow-400 text-xs">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-line"></i>
+</div>
+</div>
+</div>
+<p class="text-sm text-gray-600 mb-3">"As someone with a beard, finding the right oil was challenging. The Argan blend has been perfect for both my facial hair and the skin underneath."</p>
+<div class="flex items-center">
+<span class="text-xs text-gray-500">Verified Purchase • Pure Argan Oil</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 w-full bg-white/95 backdrop-blur-sm border-t border-gray-200 px-2 py-3 flex justify-between z-50">
+<a href="#" class="flex flex-col items-center w-1/4 text-primary">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-home-5-fill ri-lg"></i>
+</div>
+<span class="text-xs mt-1">Home</span>
+</a>
+<a href="#" class="flex flex-col items-center w-1/4 text-gray-500">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-compass-3-line ri-lg"></i>
+</div>
+<span class="text-xs mt-1">Discover</span>
+</a>
+<a href="#" class="flex flex-col items-center w-1/4 text-gray-500">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-user-line ri-lg"></i>
+</div>
+<span class="text-xs mt-1">Profile</span>
+</a>
+<a href="#" class="flex flex-col items-center w-1/4 text-gray-500">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-shopping-bag-line ri-lg"></i>
+</div>
+<span class="text-xs mt-1">Cart</span>
+</a>
+</nav>
+<!-- Floating Action Button -->
+<div class="fixed right-4 bottom-20 z-50">
+<button class="w-14 h-14 bg-primary rounded-full shadow-lg flex items-center justify-center cursor-pointer">
+<i class="ri-drop-fill ri-xl text-white"></i>
+</button>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Progress bar animation
+const progressBars = document.querySelectorAll('.progress-bar-fill');
+progressBars.forEach(bar => {
+setTimeout(() => {
+bar.style.width = bar.style.width;
+}, 300);
+});
+});
+document.addEventListener('DOMContentLoaded', function() {
+// Quiz button functionality
+const quizButton = document.querySelector('button');
+if (quizButton && quizButton.textContent.trim() === 'Start Quiz') {
+quizButton.addEventListener('click', function() {
+const modal = document.createElement('div');
+modal.className = 'fixed inset-0 bg-black/50 flex items-center justify-center z-[100]';
+modal.innerHTML = `
+<div class="bg-white rounded-xl w-[90%] max-h-[80%] overflow-y-auto">
+<div class="p-5">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-lg font-medium">Find Your Perfect Oil</h3>
+<button class="close-modal w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 cursor-pointer">
+<i class="ri-close-line"></i>
+</button>
+</div>
+<p class="text-sm text-gray-600 mb-6">Answer a few questions to get personalized recommendations.</p>
+<div class="mb-6">
+<h4 class="text-base font-medium mb-3">What is your skin type?</h4>
+<div class="space-y-2">
+<label class="flex items-center p-3 border border-gray-200 rounded-lg cursor-pointer">
+<input type="radio" name="skin-type" class="mr-3" value="dry">
+<div>
+<p class="text-sm font-medium">Dry</p>
+<p class="text-xs text-gray-500">Tight, flaky, or rough texture</p>
+</div>
+</label>
+<label class="flex items-center p-3 border border-gray-200 rounded-lg cursor-pointer">
+<input type="radio" name="skin-type" class="mr-3" value="oily">
+<div>
+<p class="text-sm font-medium">Oily</p>
+<p class="text-xs text-gray-500">Shiny, prone to breakouts</p>
+</div>
+</label>
+<label class="flex items-center p-3 border border-gray-200 rounded-lg cursor-pointer">
+<input type="radio" name="skin-type" class="mr-3" value="combination">
+<div>
+<p class="text-sm font-medium">Combination</p>
+<p class="text-xs text-gray-500">Oily T-zone, dry cheeks</p>
+</div>
+</label>
+<label class="flex items-center p-3 border border-gray-200 rounded-lg cursor-pointer">
+<input type="radio" name="skin-type" class="mr-3" value="sensitive">
+<div>
+<p class="text-sm font-medium">Sensitive</p>
+<p class="text-xs text-gray-500">Easily irritated, redness</p>
+</div>
+</label>
+</div>
+</div>
+<button class="w-full bg-primary text-white py-3 rounded-button font-medium cursor-pointer">Continue</button>
+</div>
+</div>
+`;
+document.body.appendChild(modal);
+// Close modal functionality
+modal.querySelector('.close-modal').addEventListener('click', function() {
+document.body.removeChild(modal);
+});
+});
+}
+});
+document.addEventListener('DOMContentLoaded', function() {
+// Floating action button functionality
+const fab = document.querySelector('.fixed.right-4.bottom-20 button');
+if (fab) {
+fab.addEventListener('click', function() {
+const toast = document.createElement('div');
+toast.className = 'fixed bottom-24 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-4 py-2 rounded-lg text-sm z-[100] transition-opacity duration-300 opacity-0';
+toast.innerText = 'AI Oil Finder is analyzing your profile...';
+document.body.appendChild(toast);
+// Show toast with animation
+setTimeout(() => {
+toast.classList.remove('opacity-0');
+toast.classList.add('opacity-100');
+}, 10);
+// Hide toast after 3 seconds
+setTimeout(() => {
+toast.classList.remove('opacity-100');
+toast.classList.add('opacity-0');
+setTimeout(() => {
+document.body.removeChild(toast);
+}, 300);
+}, 3000);
+});
+}
+});
+</script>
+</body>
+</html>
