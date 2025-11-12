@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GlowLuxe | Premium Face & Hair Oil Moisturizer</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://unpkg.com/lucide@latest"></script> 
+    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
         
@@ -22,6 +24,7 @@
             font-family: 'Playfair Display', serif;
         }
         
+        /* CSS for the animated oil droplets */
         .oil-droplet {
             position: absolute;
             width: 120px;
@@ -38,6 +41,11 @@
             100% { transform: translateY(0) rotate(0deg); }
         }
         
+        /* Product card hover effect (handled entirely by CSS) */
+        .product-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Ensure transition is defined */
+        }
+
         .product-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
@@ -50,22 +58,23 @@
         .ingredient-icon:hover {
             transform: scale(1.1);
         }
+
+        /* Utility for delaying droplet animation. Was missing in original code. */
+        .animation-delay-2000 { animation-delay: 2s; }
+        .animation-delay-3000 { animation-delay: 4s; }
     </style>
 </head>
 <body class="text-gray-800">
-    <!-- Header/Navigation -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
-                <!-- Logo -->
                 <div class="flex items-center">
                     <div class="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mr-3">
-                        <i class="fas fa-spa text-amber-600 text-xl"></i>
+                        <i data-lucide="droplet" class="text-amber-600 w-6 h-6"></i>
                     </div>
                     <h1 class="title-font text-2xl font-bold text-amber-800">GlowLuxe</h1>
                 </div>
                 
-                <!-- Navigation -->
                 <nav class="hidden md:flex space-x-8">
                     <a href="#" class="text-amber-900 font-medium hover:text-amber-700 transition">Home</a>
                     <a href="#" class="text-gray-600 hover:text-amber-700 transition">Products</a>
@@ -74,17 +83,15 @@
                     <a href="#" class="text-gray-600 hover:text-amber-700 transition">Contact</a>
                 </nav>
                 
-                <!-- Mobile menu button -->
                 <div class="md:hidden">
                     <button class="text-gray-600 focus:outline-none">
-                        <i class="fas fa-bars text-2xl"></i>
+                        <i data-lucide="menu" class="w-6 h-6"></i>
                     </button>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero-gradient py-20 relative overflow-hidden">
         <div class="oil-droplet top-20 left-10"></div>
         <div class="oil-droplet bottom-20 right-10 animation-delay-2000"></div>
@@ -110,12 +117,12 @@
             <div class="md:w-1/2 flex justify-center">
                 <div class="relative">
                     <img src="https://images.unsplash.com/photo-1596755094514-f87e22585ca2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" 
-                         alt="Premium oil moisturizer bottle with dropper" 
-                         class="rounded-lg shadow-2xl w-full max-w-md transform rotate-2">
+                             alt="Premium oil moisturizer bottle with dropper" 
+                             class="rounded-lg shadow-2xl w-full max-w-md transform rotate-2">
                     <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-md">
                         <div class="flex items-center">
                             <div class="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center mr-3">
-                                <i class="fas fa-leaf text-amber-600"></i>
+                                <i data-lucide="leaf" class="text-amber-600 w-5 h-5"></i>
                             </div>
                             <p class="text-sm font-medium">100% Organic<br>Ingredients</p>
                         </div>
@@ -125,7 +132,6 @@
         </div>
     </section>
 
-    <!-- Benefits Section -->
     <section class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
@@ -138,10 +144,9 @@
             </div>
             
             <div class="grid md:grid-cols-3 gap-10">
-                <!-- Benefit 1 -->
                 <div class="bg-amber-50 p-8 rounded-xl text-center hover:shadow-lg transition">
                     <div class="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-gem text-amber-600 text-2xl"></i>
+                        <i data-lucide="gem" class="text-amber-600 w-8 h-8"></i>
                     </div>
                     <h3 class="title-font text-xl font-bold text-amber-900 mb-3">Luxurious Hydration</h3>
                     <p class="text-gray-600">
@@ -149,10 +154,9 @@
                     </p>
                 </div>
                 
-                <!-- Benefit 2 -->
                 <div class="bg-amber-50 p-8 rounded-xl text-center hover:shadow-lg transition">
                     <div class="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-seedling text-amber-600 text-2xl"></i>
+                        <i data-lucide="seedling" class="text-amber-600 w-8 h-8"></i>
                     </div>
                     <h3 class="title-font text-xl font-bold text-amber-900 mb-3">Natural Ingredients</h3>
                     <p class="text-gray-600">
@@ -160,10 +164,9 @@
                     </p>
                 </div>
                 
-                <!-- Benefit 3 -->
                 <div class="bg-amber-50 p-8 rounded-xl text-center hover:shadow-lg transition">
                     <div class="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-heart text-amber-600 text-2xl"></i>
+                        <i data-lucide="heart" class="text-amber-600 w-8 h-8"></i>
                     </div>
                     <h3 class="title-font text-xl font-bold text-amber-900 mb-3">Multi-Purpose</h3>
                     <p class="text-gray-600">
@@ -174,7 +177,6 @@
         </div>
     </section>
 
-    <!-- Product Showcase -->
     <section class="py-20 bg-amber-50">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
@@ -187,12 +189,11 @@
             </div>
             
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Product 1 -->
                 <div class="product-card bg-white p-6 rounded-xl shadow-md transition duration-300">
                     <div class="relative h-64 mb-6">
                         <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" 
-                             alt="Radiant Glow Face Oil" 
-                             class="w-full h-full object-contain">
+                                 alt="Radiant Glow Face Oil" 
+                                 class="w-full h-full object-contain">
                         <div class="absolute top-4 right-4 bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-xs font-medium">
                             Best Seller
                         </div>
@@ -207,12 +208,11 @@
                     </div>
                 </div>
                 
-                <!-- Product 2 -->
                 <div class="product-card bg-white p-6 rounded-xl shadow-md transition duration-300">
                     <div class="relative h-64 mb-6">
                         <img src="https://images.unsplash.com/photo-1596755094514-f87e22585ca2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" 
-                             alt="Silky Strands Hair Elixir" 
-                             class="w-full h-full object-contain">
+                                 alt="Silky Strands Hair Elixir" 
+                                 class="w-full h-full object-contain">
                     </div>
                     <h3 class="title-font text-xl font-bold text-amber-900 mb-2">Silky Strands Hair Elixir</h3>
                     <p class="text-gray-600 text-sm mb-4">For all hair types</p>
@@ -224,12 +224,11 @@
                     </div>
                 </div>
                 
-                <!-- Product 3 -->
                 <div class="product-card bg-white p-6 rounded-xl shadow-md transition duration-300">
                     <div class="relative h-64 mb-6">
                         <img src="https://images.unsplash.com/photo-1607602132700-06825894472a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
-                             alt="Golden Nectar Body Oil" 
-                             class="w-full h-full object-contain">
+                                 alt="Golden Nectar Body Oil" 
+                                 class="w-full h-full object-contain">
                         <div class="absolute top-4 right-4 bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-xs font-medium">
                             New
                         </div>
@@ -247,7 +246,6 @@
         </div>
     </section>
 
-    <!-- Ingredients Section -->
     <section class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row items-center">
@@ -262,25 +260,25 @@
                     <div class="grid grid-cols-2 gap-6">
                         <div class="flex items-center">
                             <div class="ingredient-icon w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mr-4">
-                                <i class="fas fa-leaf text-amber-600"></i>
+                                <i data-lucide="leaf" class="text-amber-600 w-5 h-5"></i>
                             </div>
                             <span class="font-medium">Organic Argan Oil</span>
                         </div>
                         <div class="flex items-center">
                             <div class="ingredient-icon w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mr-4">
-                                <i class="fas fa-spa text-amber-600"></i>
+                                <i data-lucide="droplet" class="text-amber-600 w-5 h-5"></i>
                             </div>
                             <span class="font-medium">Jojoba Oil</span>
                         </div>
                         <div class="flex items-center">
                             <div class="ingredient-icon w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mr-4">
-                                <i class="fas fa-seedling text-amber-600"></i>
+                                <i data-lucide="flower" class="text-amber-600 w-5 h-5"></i>
                             </div>
                             <span class="font-medium">Rosehip Oil</span>
                         </div>
                         <div class="flex items-center">
                             <div class="ingredient-icon w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mr-4">
-                                <i class="fas fa-wind text-amber-600"></i>
+                                <i data-lucide="sun" class="text-amber-600 w-5 h-5"></i>
                             </div>
                             <span class="font-medium">Evening Primrose</span>
                         </div>
@@ -290,12 +288,12 @@
                 <div class="md:w-1/2">
                     <div class="relative">
                         <img src="https://images.unsplash.com/photo-1600880292205-ada957a446c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" 
-                             alt="Natural ingredients for oil moisturizer" 
-                             class="rounded-lg shadow-lg w-full">
+                                 alt="Natural ingredients for oil moisturizer" 
+                                 class="rounded-lg shadow-lg w-full">
                         <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-lg shadow-md">
                             <div class="flex items-center">
                                 <div class="w-14 h-14 bg-amber-100 rounded-full flex items-center justify-center mr-4">
-                                    <i class="fas fa-certificate text-amber-600 text-xl"></i>
+                                    <i data-lucide="award" class="text-amber-600 w-6 h-6"></i>
                                 </div>
                                 <div>
                                     <p class="font-bold text-amber-900">Cruelty Free</p>
@@ -309,7 +307,6 @@
         </div>
     </section>
 
-    <!-- Testimonials -->
     <section class="py-20 bg-amber-900 text-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
@@ -322,11 +319,10 @@
             </div>
             
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Testimonial 1 -->
                 <div class="bg-amber-800 p-8 rounded-xl">
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 rounded-full bg-amber-700 flex items-center justify-center mr-4">
-                            <span class="text-xl">⭐</span>
+                            <i data-lucide="user" class="text-amber-300 w-6 h-6"></i>
                         </div>
                         <div>
                             <h4 class="font-bold">Sarah J.</h4>
@@ -337,19 +333,18 @@
                         "The Radiant Glow Face Oil has completely transformed my skincare routine. My complexion has never looked better - hydrated, even-toned, and glowing!"
                     </p>
                     <div class="flex">
-                        <i class="fas fa-star text-amber-300 mr-1"></i>
-                        <i class="fas fa-star text-amber-300 mr-1"></i>
-                        <i class="fas fa-star text-amber-300 mr-1"></i>
-                        <i class="fas fa-star text-amber-300 mr-1"></i>
-                        <i class="fas fa-star text-amber-300"></i>
+                        <i data-lucide="star" class="text-amber-300 w-4 h-4 mr-1 fill-amber-300"></i>
+                        <i data-lucide="star" class="text-amber-300 w-4 h-4 mr-1 fill-amber-300"></i>
+                        <i data-lucide="star" class="text-amber-300 w-4 h-4 mr-1 fill-amber-300"></i>
+                        <i data-lucide="star" class="text-amber-300 w-4 h-4 mr-1 fill-amber-300"></i>
+                        <i data-lucide="star" class="text-amber-300 w-4 h-4 fill-amber-300"></i>
                     </div>
                 </div>
                 
-                <!-- Testimonial 2 -->
                 <div class="bg-amber-800 p-8 rounded-xl">
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 rounded-full bg-amber-700 flex items-center justify-center mr-4">
-                            <span class="text-xl">⭐</span>
+                            <i data-lucide="user" class="text-amber-300 w-6 h-6"></i>
                         </div>
                         <div>
                             <h4 class="font-bold">Michael T.</h4>
@@ -360,19 +355,18 @@
                         "As someone with curly hair, the Silky Strands Elixir has been a game-changer. It tames frizz without weighing my hair down. I use it every day!"
                     </p>
                     <div class="flex">
-                        <i class="fas fa-star text-amber-300 mr-1"></i>
-                        <i class="fas fa-star text-amber-300 mr-1"></i>
-                        <i class="fas fa-star text-amber-300 mr-1"></i>
-                        <i class="fas fa-star text-amber-300 mr-1"></i>
-                        <i class="fas fa-star text-amber-300"></i>
+                        <i data-lucide="star" class="text-amber-300 w-4 h-4 mr-1 fill-amber-300"></i>
+                        <i data-lucide="star" class="text-amber-300 w-4 h-4 mr-1 fill-amber-300"></i>
+                        <i data-lucide="star" class="text-amber-300 w-4 h-4 mr-1 fill-amber-300"></i>
+                        <i data-lucide="star" class="text-amber-300 w-4 h-4 mr-1 fill-amber-300"></i>
+                        <i data-lucide="star" class="text-amber-300 w-4 h-4 fill-amber-300"></i>
                     </div>
                 </div>
                 
-                <!-- Testimonial 3 -->
                 <div class="bg-amber-800 p-8 rounded-xl">
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 rounded-full bg-amber-700 flex items-center justify-center mr-4">
-                            <span class="text-xl">⭐</span>
+                            <i data-lucide="user" class="text-amber-300 w-6 h-6"></i>
                         </div>
                         <div>
                             <h4 class="font-bold">Priya K.</h4>
@@ -383,18 +377,17 @@
                         "The Golden Nectar Body Oil leaves my skin so soft and has the most beautiful subtle scent. It's become my post-shower ritual - pure luxury!"
                     </p>
                     <div class="flex">
-                        <i class="fas fa-star text-amber-300 mr-1"></i>
-                        <i class="fas fa-star text-amber-300 mr-1"></i>
-                        <i class="fas fa-star text-amber-300 mr-1"></i>
-                        <i class="fas fa-star text-amber-300 mr-1"></i>
-                        <i class="fas fa-star text-amber-300"></i>
+                        <i data-lucide="star" class="text-amber-300 w-4 h-4 mr-1 fill-amber-300"></i>
+                        <i data-lucide="star" class="text-amber-300 w-4 h-4 mr-1 fill-amber-300"></i>
+                        <i data-lucide="star" class="text-amber-300 w-4 h-4 mr-1 fill-amber-300"></i>
+                        <i data-lucide="star" class="text-amber-300 w-4 h-4 mr-1 fill-amber-300"></i>
+                        <i data-lucide="star" class="text-amber-300 w-4 h-4 fill-amber-300"></i>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
     <section class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <div class="bg-gradient-to-r from-amber-500 to-amber-600 rounded-2xl p-12 text-center">
@@ -411,15 +404,13 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-amber-900 text-white pt-16 pb-8">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-4 gap-12 mb-12">
-                <!-- Logo/About -->
                 <div>
                     <div class="flex items-center mb-6">
                         <div class="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mr-3">
-                            <i class="fas fa-spa text-amber-600 text-xl"></i>
+                            <i data-lucide="droplet" class="text-amber-600 w-6 h-6"></i>
                         </div>
                         <h1 class="title-font text-2xl font-bold text-white">GlowLuxe</h1>
                     </div>
@@ -427,19 +418,18 @@
                         Premium oil moisturizers crafted with nature's finest ingredients for radiant skin and luscious hair.
                     </p>
                     <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-amber-800 hover:bg-amber-700 flex items-center justify-center transition">
-                            <i class="fab fa-instagram"></i>
+                        <a href="#" class="w-10 h-10 rounded-full bg-amber-800 hover:bg-amber-700 flex items-center justify-center transition" aria-label="Instagram">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-amber-800 hover:bg-amber-700 flex items-center justify-center transition">
-                            <i class="fab fa-facebook-f"></i>
+                        <a href="#" class="w-10 h-10 rounded-full bg-amber-800 hover:bg-amber-700 flex items-center justify-center transition" aria-label="Facebook">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-amber-800 hover:bg-amber-700 flex items-center justify-center transition">
-                            <i class="fab fa-pinterest-p"></i>
+                        <a href="#" class="w-10 h-10 rounded-full bg-amber-800 hover:bg-amber-700 flex items-center justify-center transition" aria-label="Pinterest">
+                            <i data-lucide="pinterest" class="w-5 h-5"></i>
                         </a>
                     </div>
                 </div>
                 
-                <!-- Quick Links -->
                 <div>
                     <h3 class="title-font text-lg font-bold mb-6">Quick Links</h3>
                     <ul class="space-y-3">
@@ -451,7 +441,6 @@
                     </ul>
                 </div>
                 
-                <!-- Customer Service -->
                 <div>
                     <h3 class="title-font text-lg font-bold mb-6">Customer Service</h3>
                     <ul class="space-y-3">
@@ -463,49 +452,52 @@
                     </ul>
                 </div>
                 
-                <!-- Newsletter -->
                 <div>
                     <h3 class="title-font text-lg font-bold mb-6">Stay Connected</h3>
                     <p class="text-amber-200 mb-4">
                         Subscribe to our newsletter for exclusive offers and beauty tips.
                     </p>
                     <form class="flex">
-                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-full focus:outline-none text-gray-800 w-full">
-                        <button class="bg-amber-600 hover:bg-amber-700 px-4 py-2 rounded-r-full transition">
-                            <i class="fas fa-paper-plane"></i>
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-full focus:outline-none text-gray-800 w-full" aria-label="Email for newsletter">
+                        <button class="bg-amber-600 hover:bg-amber-700 px-4 py-2 rounded-r-full transition" aria-label="Subscribe">
+                            <i data-lucide="send" class="w-5 h-5"></i>
                         </button>
                     </form>
                 </div>
             </div>
             
             <div class="pt-8 border-t border-amber-800 text-center text-amber-300 text-sm">
-                <p>© 2023 GlowLuxe. All rights reserved.</p>
+                <p>© <span id="currentYear">2025</span> GlowLuxe. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Simple animation for oil droplets
         document.addEventListener('DOMContentLoaded', function() {
+            // 3. RECTIFICATION: Simplified the JavaScript for droplets and removed redundant hover logic.
+
+            // Initialize Lucide icons on the page
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+
             const droplets = document.querySelectorAll('.oil-droplet');
             
             droplets.forEach((droplet, index) => {
-                // Add animation delay based on index
-                droplet.style.animationDelay = `${index * 1}s`;
+                // Add animation delay based on index for variety
+                if (!droplet.style.animationDelay) {
+                    droplet.style.animationDelay = `${index * 1.5}s`;
+                }
             });
+
+            // Set the current year for the copyright notice
+            const currentYearElement = document.getElementById('currentYear');
+            if (currentYearElement) {
+                currentYearElement.textContent = new Date().getFullYear();
+            }
             
-            // Product card hover effect
-            const productCards = document.querySelectorAll('.product-card');
-            
-            productCards.forEach(card => {
-                card.addEventListener('mouseenter', function() {
-                    this.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
-                });
-                
-                card.addEventListener('mouseleave', function() {
-                    this.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
-                });
-            });
+            // NOTE: The product card hover effect is now purely CSS, as originally intended.
+            // The redundant JS listeners for 'mouseenter' and 'mouseleave' were removed.
         });
     </script>
 </body>
