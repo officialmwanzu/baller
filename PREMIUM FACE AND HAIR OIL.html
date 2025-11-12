@@ -188,7 +188,11 @@
                 </p>
             </div>
             
-            <div class="grid md:grid-cols-3 gap-8">
+            <div id="product-list-container" class="grid md:grid-cols-3 gap-8">
+    <div class="md:col-span-3 text-center py-10 text-amber-800">
+        Loading products...
+    </div>
+</div>
                 <div class="product-card bg-white p-6 rounded-xl shadow-md transition duration-300">
                     <div class="relative h-64 mb-6">
                         <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" 
@@ -457,7 +461,12 @@
                     <p class="text-amber-200 mb-4">
                         Subscribe to our newsletter for exclusive offers and beauty tips.
                     </p>
-                    <form class="flex">
+                    <form id="subscribe-form" class="flex">
+    <input type="email" id="subscribe-email" placeholder="Your email" class="px-4 py-2 rounded-l-full focus:outline-none text-gray-800 w-full" aria-label="Email for newsletter" required>
+    <button type="submit" class="bg-amber-600 hover:bg-amber-700 px-4 py-2 rounded-r-full transition" aria-label="Subscribe">
+        <i data-lucide="send" class="w-5 h-5"></i>
+    </button>
+</form>
                         <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-full focus:outline-none text-gray-800 w-full" aria-label="Email for newsletter">
                         <button class="bg-amber-600 hover:bg-amber-700 px-4 py-2 rounded-r-full transition" aria-label="Subscribe">
                             <i data-lucide="send" class="w-5 h-5"></i>
